@@ -22,8 +22,5 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Instalar navegadores Playwright
-        run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install"
-
       - name: Ejecutar pruebas Maven
         run: mvn clean verify
